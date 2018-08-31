@@ -1,11 +1,22 @@
 <html>
-<head><link rel ="stylesheet" type="text/css" href="sample.css"></head>
+<link rel ="stylesheet" type="text/css" href="ArrayStyle.css">
+<head>
+<h1>Array Exercise</h1>
+</head>
 <body>
   <form action= "ArrayDemo.php" method= "Post">
-    <input type="text" value="Rows" name="Rows"/>
-    <input type="text" value="Collumns"  name="Collumns";/>
-    <input type="text" value="Max"  name="Max";/>
-    <input type="text"  value="Min" name="Min";/>
+    <label for='Rows'>Rows<label/>
+    <input type="text" placeholder="How many rows?" name="Rows";/><br>
+
+    <label for='Collumns'>Collumns<label/>
+    <input type="text" placeholder="How many collumns?"  name="Collumns";/><br>
+
+    <label for='Max'>Max<label/>
+    <input type="text" placeholder="Enter Max value."  name="Max";/><br>
+
+    <label for='Min'>Min<label/>
+    <input type="text"  placeholder="Enter Min value." name="Min";/><br>
+
     <input type="submit" value="Submit";/>
     <input type="reset" value="Reset";/>
 </form>

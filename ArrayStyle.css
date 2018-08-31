@@ -1,0 +1,46 @@
+
+html {
+    background-attachment: fixed;
+
+    background: linear-gradient(to top, #8f00b3, #99c2ff);
+}
+h1   	{ font-family: Arial, Helvetica, Sans-serif; font-size:18pt;
+	  color:purple; font-weight:bold; position:relative;left: 460px;}
+
+h2   	{ font-family: Arial, Helvetica, Sans-serif; font-size:12pt;
+	  color:black; font-weight:bold; }
+
+p	{ font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
+	  color:black; }
+
+p.alert	{ font-style: italic; color:red;}
+form {
+
+    position: relative;
+
+    top: 0px;
+    left: 460px;
+    width: 50%;
+}
+table{
+    position: relative;
+		background: linear-gradient(to top, #99c2ff, #8f00b3);
+    top: 25px;
+		left:-460px;
+    width: 890px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+th, td {
+		border-style: solid;
+		border-color: linear-gradient(to bottom, #99c2ff, #8f00b3);
+
+    padding: 15px 15px;
+}
+
+select	{ font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
+	  font-weight: bold; color:blue; background: lightBlue; }
+
+option	{ font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
+	  color:black; background: silver; }

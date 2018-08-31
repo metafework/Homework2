@@ -1,19 +1,36 @@
 <html>
-<head><link rel ="stylesheet" type="text/css" href="sample.css"></head>
-<body>
-  <form action= "ArrayDemo.php" method= "Post">
-    <input type="text" value="Rows" name="Rows"/>
-    <input type="text" value="Collumns"  name="Collumns";/>
-    <input type="text" value="Max"  name="Max";/>
-    <input type="text"  value="Min" name="Min";/>
-    <input type="submit" value="Submit";/>
-    <input type="reset" value="Reset";/>
-</form>
+<link rel ="stylesheet" type="text/css" href="ArrayStyle.css">
+<head>
 
-<?php $Rows=$_POST["Rows"];
-$Colls=$_POST["Collumns"];
-$Min=$_POST["Min"];
-$Max=$_POST["Max"];
+<h1>Array Exercise</h1>
+</head>
+<body>
+
+  <?php
+
+  $Rows=$_POST["Rows"];
+  $Colls=$_POST["Collumns"];
+  $Min=$_POST["Min"];
+  $Max=$_POST["Max"];
+  echo "<form action= 'ArrayDemo.php' method= 'Post'>
+    <label for='Rows'>Rows<label/>
+    <input type='text' value=",$Rows," name='Rows'/><br>
+
+    <label for='Collumns'>Collumns<label/>
+    <input type='text' value=",$Colls,"  name='Collumns'/><br>
+
+    <label for='Max'>Max<label/>
+    <input type='text' value=",$Max,"  name='Max'/><br>
+
+    <label for='Min'>Min<label/>
+    <input type='text'  value=",$Min," name='Min'/><br>
+
+    <input type='submit' value='Submit'/>
+    <input type='reset' value='Reset'/>
+</form>";
+
+
+
 
 $arrayOfArrays=array();
 echo "<table>";
@@ -21,7 +38,7 @@ for ($i= 0; $i<$Rows; $i++){
   echo "<tr>";
   $array=array();
   for ($j= 0; $j<$Colls; $j++){
-    $array[$j]=rand($Min,$Max);
+    $array[$j]=mt_rand($Min,$Max);
     echo "<td>", $array[$j] ,"</td>";
   }
   echo "</tr>";
@@ -61,6 +78,24 @@ for ($i= 0; $i<$Rows; $i++){
 
 echo "</table>";
 
+echo "<table>";
+for ($i= 0; $i<$Rows; $i++){
+  $array=$arrayOfArrays[$i];
+  echo "<tr>";
+  for ($j= 0; $j<$Colls; $j++){
+    echo "<td>", $array[$j] ,"</td>";
+  }
+  echo "</tr>";
+  echo "<tr>";
+  for ($j= 0; $j<$Colls; $j++){
+    if($array[$j]<0){echo "<td> negative </td>";
+    }elseif($array[$j]>0){echo "<td> positive </td>";
+    }else{echo "<td> zero </td>";}
+  }
+  echo "</tr>";
+
+}
+echo "</table>"
 ?>
 
 
